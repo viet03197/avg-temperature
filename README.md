@@ -1,9 +1,11 @@
 # avg-temperature
 Get the average temperature for the last 7 days
  
-This program will use the Netatmo's API to retrieve the temperature data from a chosen device.
+Use the Netatmo's API to retrieve the temperature data from a chosen device.
 In this implementation the device is fixed.
 You need to get access to the API using the credentials given on your corresponding application.
+
+This program uses the *Client credentials grant type* but you can always call the method ```calculate(data)``` in ```temperature.py``` on the data retrieved by other authentication methods. 
 
 The program will output the average temperature for the period. The program also draws a plot of the temperature for this period of time.
 
