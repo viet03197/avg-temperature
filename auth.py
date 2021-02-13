@@ -2,13 +2,23 @@ import getpass
 import json
 import requests
 import base64
-
+"""
+    Get the API access token for the corresponding application.
+    The data needed for the request:
+        - grant_type = password
+        - client_id, client_secret, username, password
+        - scope = read_station
+"""
 base_url = 'https://api.netatmo.com/oauth2/token'
 grant_type = 'password'
 scope = 'read_station'
 token_properties = ['access_token', 'expires_in', 'refresh_token']
 
 def get_input(file=None):
+    """ This method is called in temperature.py
+        Get the credentials of the user and the application from a file.
+        If no filename was given, get input from the keyboard.
+    """
     credentials = ['', '', '', '']
     if file is None:
         credentials[0] = getpass.getpass(prompt='Your client id:')

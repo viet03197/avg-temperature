@@ -50,6 +50,8 @@ def temp_plot(temp):
     return
 
 def calculate(data):
+    """ From the retrieved data (json format), calculate the necessary information
+    """
     items = data['body'].items()
     temp_by_date = dict()
     avg_temp_by_date = dict()
