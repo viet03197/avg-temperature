@@ -14,6 +14,7 @@ To run this from command prompt
 > ```>python temperature.py <filename>```
 - Use the input from keyboard
 > ```>python temperature.py```
+
 > The program will then ask you to enter the necessary information.
  
 The output for the program should look like this:
